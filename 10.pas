@@ -1,6 +1,6 @@
 ﻿program zad10;
-var s, www, zzz: string; 
-    n, i: integer;
+var s, www, zzz, s1: string; 
+    n: integer;
      
      
 BEGIN
@@ -16,14 +16,11 @@ BEGIN
   begin
   delete(s, 1, 3);
   insert(www, s, 1);
-  end;
   writeln(s);
-  
-  // если не начинается, то добавить
-  if (s[1] <> 'a') and (s[2] <> 'b') and (s[3] <> 'c') then 
-  begin
-  insert(zzz, s, n + 1);
-  writeln(s);
-  end;
-
+  end
+  else  // если строка не начинается, то добавить
+    begin 
+    insert(zzz, s, n + 1);
+    writeln(s);
+    end;
 END.
